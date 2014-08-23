@@ -1,7 +1,4 @@
 # vim: ft=zsh
-function toon {
-  echo -n ""
-}
 
 get_git_dirty() {
   git diff --quiet || echo '*'
@@ -24,7 +21,7 @@ theme_precmd () {
 }
 
 setopt prompt_subst
-PROMPT='%{$fg[green]%}%B%m%b:%1~%{$reset_color%}%# '
+PROMPT='%{$fg[yellow]%}%m%{$reset_color%}:%1~%# '
 RPROMPT='%{$reset_color%}${vcs_info_msg_0_}%{$reset_color%}'
 
 autoload -U add-zsh-hook
